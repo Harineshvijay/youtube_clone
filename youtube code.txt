@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>youtube.com</title>
+
+    <style>
+      .header{
+      height:60px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position: fixed;
+      top:0;
+      left:0;
+      right:0;
+      z-index:100;
+      background-color:white;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: gray;
+
+
+      
+      }
+      body{
+        margin:0px;
+ 
+      }
+      .total_ali{
+        display:grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 20px;
+      }
+      .row1{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 20px;
+        height: 300px;
+        background-color: #f0f0f0;
+      
+      }
+      .div1{
+        display:grid;
+        grid-template-rows: 1fr 1fr;
+        height: 300px;
+      }
+      .div2{
+        display:grid;
+      }
+      .sub1{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        display: inline-block;
+        height: 125px;   
+        vertical-align: top;
+      }
+      .image1{
+        width: 300px; 
+        
+        z-index: 1;
+       
+      }
+      .mainimg1{
+        height:200px;
+        position:relative;
+        
+      
+      }
+      .smalimg1{
+        margin-top: 0px;
+        width:50px;
+        display:inline-block;
+        vertical-align: top;
+        
+      
+       
+        
+        
+      }
+      .smaltex1{
+      
+        width:180px;
+        display: inline-block;
+      
+      }
+      .image2{
+        width:40px;
+        height:40px;
+        border-radius:50px;  
+      }
+      .image3{
+        width: 300px;
+        vertical-align: top;
+      }
+      .search{
+        margin-top: 5px;
+        display:block;
+        margin-bottom: 5px;
+        display: flex;
+        flex: 1;
+        padding-top: 5px;
+        padding-bottom:5px;
+        padding-left: 10px;
+        font-size: 16px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: gray;
+      
+      }
+      .par1{
+        margin-top: 0px;
+        font-family: Arial,  sans-serif;
+        width:230px;
+      
+        font-size: 15px;font-weight: 30px;
+        
+      }
+      .par2{
+        margin-top: 0px;
+        font-family: Arial,  sans-serif;
+        display: inline-block;
+        margin-bottom:0px;
+        font-size:12px;
+      
+      }
+      .par3{
+        font-family: Arial,  sans-serif;
+        display: inline-block;
+        
+        font-size:12px;
+      
+        margin-top:0px;
+              }
+        .par4{
+        font-family: Arial,  sans-serif;
+        display:block;
+        margin-top: 20px;
+        margin-bottom:0px;
+        font-size:12px;
+        }
+        .start{
+  
+          width:150px;
+          display: grid;
+          grid-template-columns: 30px 70px;
+          margin-top: 20px;
+         
+          
+        }
+        .middle{
+          
+          flex: 1;
+          margin-left:70px;
+          margin-right:35px;
+          max-width: 500px;
+          margin-top: px;
+          display:flex;
+          align-items: center;
+          flex-direction: row;
+          border-width: ;
+          
+          
+        }
+        .end{
+     
+          width:180px;
+          flex-shrink: 0;
+         
+          display:flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-right: 20px;
+        }
+        .threedot{
+          height: 15px;
+        }
+        .youtubelogo{
+          height:15px;
+        }
+        .sear{
+          margin-bottom: 5px;
+          padding-top: 4px;
+          padding-bottom: 0px;
+          width:20px;
+       
+          height:18px;
+ 
+        }
+        .search::placeholder{
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 16px;
+        }
+       .butt{
+        margin-top: 0px;
+        width:30px;
+        height: 30px;
+        border-width: 1px;
+        border-color: gray;
+        border-style: solid;
+
+       }
+       .mic{
+        width:30px;
+        height: 30px;
+        border:none;
+        border-radius: 15px;
+        background-color:white;
+        margin-left: 5px;
+       }
+       .cal{
+        height:24px;
+
+       }
+       .cal2{
+        height: 24px;
+       }
+       .cal3{
+        height: 24px;
+
+       }
+       .cal4{
+        height: 34px;
+        border-radius: 16px;
+       }
+       .sidebar{
+        position:fixed;
+        top:55px;
+        left:0;
+        bottom:0;
+        background-color: white;
+        width:72px;
+       }
+       .video_time{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 500px;
+        padding-top: 4px;
+        padding-bottom:4px;
+        padding-right:4px;
+        padding-left:4px;
+        position:absolute;
+        bottom:40px;
+        right:10px;
+       
+        background-color: rgb(29, 26, 26);
+        color: white;
+
+       }
+       .notification{
+        position: relative;
+       }
+       .notificationc{
+        position:absolute;
+        color:black;
+        top:0;
+        right:0;
+        background-color: rgb(241, 4, 4);
+        border-radius: 40px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 11px;
+
+       }
+ 
+       .sidebar_link{
+        height: 75px;
+        padding-top: 30px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        padding-right:10px;
+       }
+       .sidebar_link:hover{
+        background-color: rgb(236, 225, 225);
+       }
+       .sidebar_link img{
+        height: 30px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        
+
+       }
+    </style>
+
+  </head>
+  <body style = "margin-bottom: 1000px;
+  padding-top: 80px;
+  padding-left:85px;">
+  <div class = "total_ali1">
+    <div class = "header">
+      <div class = "start">
+        <img class  = "threedot" src = "hamburger-menu.svg">
+        <img class = "youtube" src = "youtube-logo.svg">
+      </div>
+      <div class = "middle ">
+
+        <input class = "search" placeholder="search" type="text">
+      <button class="butt">
+        <img class = "sear" src="search.svg">
+      </button>
+        <img class = "mic" src = "voice-search-icon.svg">
+    
+      </div>
+      <div class = "end">
+        <img class = "cal"src="upload.svg">
+        <img class = "cal2"src="youtube-apps.svg">
+       <div class = "notification">
+       <img class = "cal3"src = "notifications.svg">
+       <div class = "notificationc">3</div>
+      </div>
+        <img  class = "cal4"src = "my-channel.jpeg">
+     
+       
+      </div>
+    </div>
+    <div class = "sidebar">
+      <div class = "sidebar_link">
+        <img src ="home.svg">
+        <div>home</div>
+        </div>
+      <div class = "sidebar_link">
+        <img src = "explore.svg">
+        <div>explore</div>
+        </div>
+
+      <div class = "sidebar_link">
+        <img src = "subscriptions.svg">
+        <div>subcertion</div>
+    
+        </div>
+      <div class = "sidebar_link">
+        <img src = "originals.svg">
+        <div>original</div>
+        </div>
+      <div class = "sidebar_link">
+        <img src = "youtube-music.svg">
+        <div>Youtube music</div>
+        </div>
+      <div class = "sidebar_link">
+        <img src = "library.svg">
+        <div>libary</div>
+        </div>
+
+
+
+    </div>
+    
+    <div class = "row1">
+      <div class = "div1">
+        <div class = "mainimg1">
+          <a> href = "youtube.com"<img class="image1" src="thumbnail-1.webp"></a>
+          <div class = "video_time">
+            5:00
+          </div>
+        </div>
+        <div class="sub1">
+          <div class = "smalimg1">
+            <img class = "image2" src = "channel-1.jpeg">
+          </div>
+          <div class = "smaltex1" >
+            <p class = "par1">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+            <p  class = "par2">Marques Brownlee</p>
+            <p class = "par3">3.4M views · 6 months ago</p>
+          </div>
+        </div>
+      </div>
+      <div class = "div2">
+        <div class = "mainimg1">
+          <img class="image1" src="thumbnail-2.webp">
+          <div class = "video_time">
+            5:00
+          </div>
+        </div>
+       <div class="sub1">
+        <div class = "smalimg1">
+          <img class = "image2" src = "channel-2.jpeg">
+        </div>
+        <div class = "smaltex1">
+          <p class = "par1">
+            Try Not To Laugh Challenge #9</p>
+          <p  class = "par4">Markiplier</p>
+          <p class = "par3">19M views · 4 years ago</p>
+        </div> 
+       </div>
+      </div>
+      <div class = "div2">
+        <div class = "mainimg1">
+          <img class="image1" src="thumbnail-3.webp">
+          <div class = "video_time">
+            5:00
+          </div>
+        </div>
+       <div class="sub1">
+        <div class = "smalimg1">
+          <img class = "image2" src = "channel-3.jpeg">
+        </div>
+        <div class = "smaltex1">
+          <p class = "par1">
+            Crazy Tik Toks Taken Moments Before DISASTER</p>
+          <p  class = "par4">SSSniperWolf</p>
+          <p class = "par3">12M views · 1 year ago</p>
+        </div> 
+       </div>
+      </div>
+      <div class = "div2">
+        <div class = "mainimg1">
+          <img class="image1" src="thumbnail-4.webp">
+          <div class = "video_time">
+            5:00
+          </div>
+        </div>
+       <div class="sub1">
+        <div class = "smalimg1">
+          <img class = "image2" src = "channel-4.jpeg">
+        </div>
+        <div class = "smaltex1">
+          <p class = "par1">
+            The Simplest Math Problem No One Can Solve - Collatz</p>
+          <p  class = "par4">Veritasium</p>
+          <p class = "par3">18M views · 4 months ago</p>
+        </div> 
+       </div>
+      </div>
+    </div>
+    <div class = "row1">
+      <div class = "div1">
+          <div class = "mainimg1">
+            <img class="image1" src="thumbnail-5.webp">
+            <div class = "video_time">
+              5:00
+            </div>
+
+          </div>
+          <div class="sub1">
+            <div class = "smalimg1">
+              <img class = "image2" src = "channel-5.jpeg">
+            </div>
+            <div class = "smaltex1" >
+              <p class = "par1">
+                Kadane's Algorithm to Maximum Sum Subarray Problem</p>
+              <p  class = "par2">CS Dojo</p>
+              <p class = "par3">519K views · 5 years ago</p>
+            </div>
+          </div>
+      </div>
+      <div class = "div2">
+          <div class = "mainimg1">
+            <img class="image1" src="thumbnail-6.webp">
+            <div class = "video_time">
+              5:00
+            </div>
+          </div>
+        <div class="sub1">
+          <div class = "smalimg1">
+            <img class = "image2" src = "channel-6.jpeg">
+          </div>
+          <div class = "smaltex1">
+            <p class = "par1">
+            S  Anything You Can Fit In The Circle I’ll Pay For</p>
+              <p  class = "par4">MrBeast</p>
+              <p class = "par3">141M views · 1 year ago</p>
+            
+          </div> 
+        </div>
+        </div>
+        <div class = "div2">
+          <div class = "mainimg1">
+            <img class="image1" src="thumbnail-7.webp">
+            <div class = "video_time">
+              5:00
+            </div>
+          </div>
+        <div class="sub1">
+          <div class = "smalimg1">
+            <img class = "image2" src = "channel-7.jpeg">
+          </div>
+          <div class = "smaltex1">
+            <p class = "par1">
+              Why Planes Don't Fly Over Tibet</p>
+            <p  class = "par4">RealLifeLore</p>
+            <p class = "par3">6.6M views · 1 year ago</p>
+          </div> 
+        </div>
+        </div>
+        <div class = "div2">
+          <div class = "mainimg1">
+            <img class="image1" src="thumbnail-8.webp">
+            <div class = "video_time">
+              5:00
+            </div>
+          </div>
+        <div class="sub1">
+          <div class = "smalimg1">
+            <img class = "image2" src = "channel-8.jpeg">
+          </div>
+          <div class = "smaltex1">
+            <p class = "par1">
+              Inside The World's Biggest Passenger Plane</p>
+            <p  class = "par4">Tech Vision</p>
+            <p class = "par3">3.7M views · 10 months ago</p>
+          </div> 
+        </div>
+      </div>
+    </div>
+    <div class = "row1">
+      <div class = "div1">
+        <div class = "mainimg1">
+          <img class="image1" src="thumbnail-9.webp">
+          <div class = "video_time">
+            5:00
+          </div>
+        </div>
+        <div class="sub1">
+          <div class = "smalimg1">
+            <img class = "image2" src = "channel-9.jpeg">
+          </div>
+          <div class = "smaltex1" >
+            <p class = "par1">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+            <p  class = "par2">Marques Brownlee</p>
+            <p class = "par3">3.4M views · 6 months ago</p>
+          </div>
+        </div>
+      </div>
+      <div class = "div2">
+        <div class = "mainimg1">
+          <img class="image1" src="thumbnail-10.webp">
+          <div class = "video_time">
+            5:00
+          </div>
+        </div>
+       <div class="sub1">
+        <div class = "smalimg1">
+          <img class = "image2" src = "channel-10.jpeg">
+        </div>
+        <div class = "smaltex1">
+          <p class = "par1">
+            Try Not To Laugh Challenge #9</p>
+          <p  class = "par4">Markiplier</p>
+          <p class = "par3">19M views · 4 years ago</p>
+        </div> 
+       </div>
+      </div>
+      <div class = "div2">
+        <div class = "mainimg1">
+          <img class="image1" src="thumbnail-11.webp">
+          <div class = "video_time">
+            5:00
+          </div>
+        </div>
+       <div class="sub1">
+        <div class = "smalimg1">
+          <img class = "image2" src = "channel-11.jpeg">
+        </div>
+        <div class = "smaltex1">
+          <p class = "par1">
+            The SECRET to Super Human STRENGTH</p>
+          <p  class = "par4">ThenX</p>
+          <p class = "par3">20M views · 3 year ago</p>
+        </div> 
+       </div>
+      </div>
+      <div class = "div2">
+        <div class = "mainimg1">
+          <img class="image1" src="thumbnail-12.webp">
+          <div class = "video_time">
+            5:00
+          </div>
+        </div>
+       <div class="sub1">
+        <div class = "smalimg1">
+          <img class = "image2" src = "channel-12.jpeg">
+        </div>
+        <div class = "smaltex1">
+          <p class = "par1">
+            How The World's Largest Cruise Ship Makes 30,000 Meals Every Day</p>
+          <p  class = "par4">Business Insider</p>
+          <p class = "par3">14M views · 1 year ago</p>
+        </div> 
+       </div>
+      </div>
+    </div>
+  </div>  
+  </body>
+</html>
